@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run webpack & npm run sass-compile",
-    "devserver" : "http-server",
+    "devserver": "http-server",
     "webpack-watch": "webpack --watch --progress --config webpack.config.js",
     "webpack": "webpack --config webpack.config.js",
     "sass-watch": "sass --watch ./src/sass:./dist/css",

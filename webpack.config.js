@@ -23,7 +23,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.tsx', '.ts', '.js'],
+        extensions: ['.webpack.js', '.web.js', '.tsx', '.ts', '.js'],
     },
     output: {
         filename: 'main.js',
