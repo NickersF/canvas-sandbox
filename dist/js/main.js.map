@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack:///./main.ts"],"names":[],"mappings":";;;;;AAAA,OAAO,CAAC,GAAG,CAAC,cAAc,CAAC,CAAC","file":"main.js","sourcesContent":["console.log(\"Hello World!\");"],"sourceRoot":""}
+{"version":3,"sources":["webpack:///./main.ts"],"names":[],"mappings":";;;;;AAAA,OAAO,CAAC,GAAG,CAAC,cAAc,CAAC,CAAC;AAE5B,CAAC,CAAC;AAEF,CAAC,CAAC,CAAC","file":"main.js","sourcesContent":["console.log(\"Hello World!\");\r\n\r\n$(function() {\r\n\r\n});"],"sourceRoot":""}

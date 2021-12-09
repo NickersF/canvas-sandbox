@@ -17,25 +17,21 @@
 <body>
     <div class="d-flex flex-column vh-100">
         <div class="row no-gutters">
-            <div class="col">main menu</div>
+            <div class="col main-menu">main menu</div>
         </div>
         <div class="row no-gutters flex-grow-1">
-            <div class="col">tools</div>
-            <div class="col">canvas</div>
+            <div id="ToolBar" class="toolbar-base toolbar-resize">tools</div>
+            <div class="col canvas-viewport">canvas</div>
         </div>
         <div class="row no-gutters">
-            <div class="col">info</div>
+            <div class="col info-bar">info</div>
         </div>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <!-- Custom JS -->
     <script src="./dist/js/main.js"></script>
-
 </body>
 
 </html>
