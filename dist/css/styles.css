@@ -13,19 +13,47 @@ body {
 }
 
 .toolbar-base {
-  width: 196px;
+  width: 212px;
+  height: 100%;
+  overflow-y: scroll;
   border-right: 1px solid #2C3E50;
 }
 
 .toolbar-resize {
   resize: horizontal;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #1C2833 #2C3E50;
 }
 
+.toolbar-tools {
+  height: 50%;
+  resize: vertical;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #1C2833 #2C3E50;
+}
+
+.toolbar-tools-header {
+  background-color: #1C2833;
+  padding: 0.5rem;
+}
+
+.toolbar-properties {
+  height: 50%;
+}
+
+.toolbar-properties-header {
+  background-color: #1C2833;
+  padding: 0.5rem;
+}
+
 .info-bar {
   border-top: 1px solid #2C3E50;
+}
+
+.max-height-full {
+  max-height: 931px;
 }
 
 ::-webkit-scrollbar {

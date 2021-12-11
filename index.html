@@ -10,21 +10,37 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./dist/css/styles.css">
+    <link rel="stylesheet" href="./dist/bootstrap-icons/font/bootstrap-icons.css">
 
     <title>Front End Starter Template</title>
 </head>
 
-<body>
+<body">
     <div class="d-flex flex-column vh-100">
         <div class="row no-gutters">
-            <div class="col main-menu">main menu</div>
+            <div id="MainMenu" class="col main-menu">main menu</div>
         </div>
-        <div class="row no-gutters flex-grow-1">
-            <div id="ToolBar" class="toolbar-base toolbar-resize">tools</div>
+        <div class="row no-gutters flex-grow-1 max-height-full">
+            <div class="toolbar-base toolbar-resize max-height-full">
+                <div id="ToolBar" class="row no-gutters toolbar-tools">
+                    <div class="col">
+                        <div class="row no-gutters toolbar-tools-header">
+                            <small><strong>TOOLS</strong></small>
+                        </div>
+                    </div>
+                </div>
+                <div id="ToolProperties" class="row no-gutters toolbar-properties">
+                    <div class="col">
+                        <div class="row no-gutters toolbar-properties-header">
+                            <i class="bi bi-sliders"></i><small><strong>PROPERTIES</strong></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col canvas-viewport">canvas</div>
         </div>
         <div class="row no-gutters">
-            <div class="col info-bar">info</div>
+            <div id="InformationBar" class="col info-bar">info</div>
         </div>
     </div>
 
