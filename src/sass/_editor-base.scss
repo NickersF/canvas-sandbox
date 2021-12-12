@@ -7,7 +7,7 @@ body {
 }
 
 .main-menu {
-    border-bottom: 1px solid colors.$grey-dark-03;
+    //border-bottom: 1px solid colors.$grey-dark-03;
 }
 
 .canvas-viewport {
@@ -56,6 +56,10 @@ body {
 
 .max-height-full {
     max-height: 931px;
+}
+
+.icon-padding-2px {
+    padding-top: 2px;
 }
 
 ::-webkit-scrollbar {

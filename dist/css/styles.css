@@ -4,10 +4,6 @@ body {
   font-size: 14px;
 }
 
-.main-menu {
-  border-bottom: 1px solid #2C3E50;
-}
-
 .canvas-viewport {
   background-color: #1C2833;
 }
@@ -54,6 +50,10 @@ body {
 
 .max-height-full {
   max-height: 931px;
+}
+
+.icon-padding-2px {
+  padding-top: 2px;
 }
 
 ::-webkit-scrollbar {
