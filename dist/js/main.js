@@ -12,14 +12,24 @@
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CanvasContext = void 0;
 class CanvasContext {
-    constructor() {
+    constructor(canvasEl) {
         try {
-            this.canvas = $('#CanvasEl').get(0);
-            this.ctx = this.canvas.getContext('2d');
+            this.canvasElement = $('#' + canvasEl).get(0);
+            this.canvasViewport = $("#CanvasViewport");
+            this.ctx = this.canvasElement.getContext('2d');
+            this.canvasElement.width = this.canvasViewport.width();
+            this.canvasElement.height = this.canvasViewport.height();
         }
         catch (e) {
-            console.log('We have encountered an error: ' + e);
+            console.log('Exception caught: ' + e);
         }
+    }
+    resizeViewport() {
+        $(window).on("resize", () => {
+            this.canvasElement.width = this.canvasViewport.width();
+            this.canvasElement.height = this.canvasViewport.height();
+            this.draw();
+        });
     }
     draw() {
         this.ctx.fillStyle = 'green';
@@ -27,6 +37,50 @@ class CanvasContext {
     }
 }
 exports.CanvasContext = CanvasContext;
+
+
+/***/ }),
+
+/***/ "./LineTool.ts":
+/*!*********************!*\
+  !*** ./LineTool.ts ***!
+  \*********************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.LineTool = void 0;
+class LineTool {
+    constructor() {
+    }
+}
+exports.LineTool = LineTool;
+
+
+/***/ }),
+
+/***/ "./RectangleTool.ts":
+/*!**************************!*\
+  !*** ./RectangleTool.ts ***!
+  \**************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.RectangleTool = void 0;
+class RectangleTool {
+    constructor() {
+    }
+    sampleCoords(canvasEl) {
+        $("#" + canvasEl).on("mousemove", e => {
+            this.offsetX = e.offsetX;
+            this.offsetY = e.offsetY;
+            $("#CursorXPos").text(this.offsetX);
+            $("#CursorYPos").text(this.offsetY);
+        });
+    }
+}
+exports.RectangleTool = RectangleTool;
 
 
 /***/ })
@@ -68,10 +122,15 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const CanvasContext_1 = __webpack_require__(/*! ./CanvasContext */ "./CanvasContext.ts");
+const LineTool_1 = __webpack_require__(/*! ./LineTool */ "./LineTool.ts");
+const RectangleTool_1 = __webpack_require__(/*! ./RectangleTool */ "./RectangleTool.ts");
 $(() => {
-    let ctxtest = new CanvasContext_1.CanvasContext();
-    console.log(ctxtest.ctx);
-    ctxtest.draw();
+    let canvasContext = new CanvasContext_1.CanvasContext("CanvasEl");
+    let rectangleTool = new RectangleTool_1.RectangleTool();
+    let lineTool = new LineTool_1.LineTool();
+    canvasContext.resizeViewport();
+    canvasContext.draw();
+    rectangleTool.sampleCoords("CanvasEl");
 });
 
 })();

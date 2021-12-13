@@ -27,10 +27,12 @@
                 <div id="ToolBar" class="row no-gutters toolbar-tools">
                     <div class="col">
                         <div class="row no-gutters toolbar-tools-header">
-                            <i class="bi bi-tools"></i><strong class="ml-2">TOOLS</strong>
+                            <div class="col">
+                                <i class="bi bi-tools"></i><strong class="ml-2">TOOLS</strong>
+                            </div>
                         </div>
                         <div class="row no-gutters">
-                            <div class="col d-flex justify-content-start">
+                            <div id="Tools" class="col d-flex justify-content-start">
                                 <div id="RectangleTool" class="d-flex m-1 tools-button-border">
                                     <div class="tools-button-base d-flex justify-content-center"><i class="bi bi-bounding-box "></i></div>
                                 </div>
@@ -44,17 +46,26 @@
                 <div id="ToolProperties" class="row no-gutters toolbar-properties">
                     <div class="col">
                         <div class="row no-gutters toolbar-properties-header">
-                            <i class="bi bi-sliders"></i><strong class="ml-2">PROPERTIES</strong>
+                            <div class="col">
+                                <i class="bi bi-sliders"></i><strong class="ml-2">PROPERTIES</strong>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div id="CurrentToolProperties" class="col d-flex justify-content-start">
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col canvas-viewport">
+            <div id="CanvasViewport" class="col canvas-viewport">
                 <canvas id="CanvasEl"></canvas>
             </div>
         </div>
         <div class="row no-gutters">
-            <div id="InformationBar" class="col info-bar">info</div>
+            <div id="InformationBar" class="col info-bar">
+                <strong>Cursor X:</strong><span id="CursorXPos"></span><strong>Cursor Y:</strong><span id="CursorYPos"></span>
+            </div>
         </div>
     </div>
 

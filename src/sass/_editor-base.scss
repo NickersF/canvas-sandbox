@@ -11,7 +11,7 @@ body {
 }
 
 .toolbar-base {
-    width: 212px;
+    width: 256px;
     height: 100%;
     overflow-y: scroll;
     border-right: 1px solid colors.$grey-dark-03;
@@ -20,7 +20,7 @@ body {
 .toolbar-resize {
     resize: horizontal;
     overflow-x: hidden;
-    scrollbar-width: thin;
+    //scrollbar-width: thin;
     scrollbar-color: colors.$grey-dark-02 colors.$grey-dark-03;
 }
 
@@ -28,7 +28,7 @@ body {
     height: 50%;
     resize: vertical;
     overflow-y: hidden;
-    scrollbar-width: thin;
+    //scrollbar-width: thin;
     scrollbar-color: colors.$grey-dark-02 colors.$grey-dark-03;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {

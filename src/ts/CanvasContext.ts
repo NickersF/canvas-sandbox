@@ -1,13 +1,27 @@
 export class CanvasContext {
-    canvas;
-    ctx;
-    constructor() {
-        try{ 
-            this.canvas = $('#CanvasEl').get(0) as HTMLCanvasElement;
-            this.ctx = this.canvas.getContext('2d');
-         }catch(e){ 
-             console.log('We have encountered an error: ' + e);
-         }
+    canvasViewport: JQuery<HTMLElement>;
+    canvasElement: HTMLCanvasElement;
+    ctx: CanvasRenderingContext2D;
+
+    constructor(canvasEl) {
+        try {
+            this.canvasElement = $('#' + canvasEl).get(0) as HTMLCanvasElement;
+            this.canvasViewport = $("#CanvasViewport");
+            this.ctx = this.canvasElement.getContext('2d');
+
+            this.canvasElement.width = this.canvasViewport.width();
+            this.canvasElement.height = this.canvasViewport.height();
+        } catch (e) {
+            console.log('Exception caught: ' + e);
+        }
+    }
+
+    resizeViewport() {
+        $(window).on("resize", () => {
+            this.canvasElement.width = this.canvasViewport.width();
+            this.canvasElement.height = this.canvasViewport.height();
+            this.draw()
+        })
     }
 
     draw() {
