@@ -129,7 +129,6 @@ $(() => {
     let rectangleTool = new RectangleTool_1.RectangleTool();
     let lineTool = new LineTool_1.LineTool();
     canvasContext.resizeViewport();
-    canvasContext.draw();
     rectangleTool.sampleCoords("CanvasEl");
 });
 

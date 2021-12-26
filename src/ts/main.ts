@@ -8,7 +8,7 @@ $(() => {
     let lineTool = new LineTool();
     
     canvasContext.resizeViewport();
-    canvasContext.draw();
+    //canvasContext.draw();
 
     rectangleTool.sampleCoords("CanvasEl");
 });
